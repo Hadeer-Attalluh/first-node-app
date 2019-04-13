@@ -1,0 +1,8 @@
+<form action="/users/delete" method="post">
+    <select name="id">
+        {{#each users}}
+        <option value={{this.id}}>{{this.name}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Delete</button>
+</form>

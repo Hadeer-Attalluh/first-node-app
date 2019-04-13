@@ -1,0 +1,10 @@
+<form action="/users/edit" method="post">
+    <select name="id">
+        {{#each users}}
+        <option value={{this.id}}>{{this.name}} {{this.age}}</option>
+        {{/each}}
+    </select>
+    <input type="text" name="newName">
+    <input type="text" name="newAge">
+    <button type="submit">Edit</button>
+</form>

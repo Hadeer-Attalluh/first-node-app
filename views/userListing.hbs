@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        {{!-- <th>Action</th> --}}
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+            {{!-- <td id={{this.id}}><Button>Delete</Button></td> --}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<form action="/users/add" method="GET">
+    <button type="submit">Add</button>
+</form>
+<form action="/users/delete" method="GET">
+    <button type="submit">Delete</button>
+</form>
+<form action="/users/edit" method="GET">
+    <button type="submit">Edit</button>
+</form>
